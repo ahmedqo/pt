@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Blank</title>
+</head>
+
+<body class="bg-gray-700">
+    <div class="flex">
+        <aside id="sidebar" class="w-full md:w-64 fixed md:relative hidden md:block z-10">
+            <div class="overflow-y-auto px-3 h-screen bg-gray-800">
+                <div class="flex items-center justify-between md:justify-center mx-2 mb-4 h-14">
+                    <a href="https://flowbite.com" class="flex items-center">
+                        <span class="self-center text-2xl text-xl font-bold whitespace-nowrap text-white">Flowbite</span>
+                    </a>
+                    <button onclick="trigger(event)" data-target="sidebar" type="button" class="bg-gray-800 md:hidden cursor-pointer flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white md:hidden">
+							<svg
+								class="w-4 h-4 text-gray-400 hover:text-white cursor-pointer pointer-events-none"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 460.775 460.775"
+							>
+								<path
+									d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55  c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55  c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505  c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55  l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719  c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
+								/>
+							</svg>
+						</button>
+                </div>
+                <ul class="space-y-2">
+                    <li>
+                        <button onclick="trigger(event)" data-target="etds" type="button" class="flex items-center p-2 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+								<svg
+									class="flex-shrink-0 w-6 h-6 transition duration-75 text-gray-400 group-hover:text-white pointer-events-none"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+								<span class="flex-1 ml-3 text-left whitespace-nowrap pointer-events-none">Etudients</span>
+								<svg class="w-6 h-6 pointer-events-none" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+							</button>
+                        <ul id="etds" class="hidden py-2 space-y-2">
+                            <li>
+                                <a href="./liste-etudients.html" class="flex items-center p-2 pl-11 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700">Liste</a
+									>
+								</li>
+								<li>
+									<a
+										href="./etudient.html"
+										class="flex items-center p-2 pl-11 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+										>Nouveau</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<button
+								onclick="trigger(event)"
+								data-target="prfs"
+								type="button"
+								class="flex items-center p-2 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+								aria-controls="dropdown-example"
+								data-collapse-toggle="dropdown-example"
+							>
+								<svg
+									class="flex-shrink-0 w-6 h-6 transition duration-75 text-gray-400 group-hover:text-white pointer-events-none"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+								<span class="flex-1 ml-3 text-left whitespace-nowrap pointer-events-none">Professeurs</span>
+								<svg class="w-6 h-6 pointer-events-none" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+							</button>
+							<ul id="prfs" class="hidden py-2 space-y-2">
+								<li>
+									<a
+										href="./liste-professeurs.html"
+										class="flex items-center p-2 pl-11 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+										>Liste</a
+									>
+								</li>
+								<li>
+									<a
+										href="./professeur.html"
+										class="flex items-center p-2 pl-11 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+										>Nouveau</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<button
+								onclick="trigger(event)"
+								data-target="mods"
+								type="button"
+								class="flex items-center p-2 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+								aria-controls="dropdown-example"
+								data-collapse-toggle="dropdown-example"
+							>
+								<svg
+									class="flex-shrink-0 w-6 h-6 transition duration-75 text-gray-400 group-hover:text-white pointer-events-none"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+								<span class="flex-1 ml-3 text-left whitespace-nowrap pointer-events-none">Modules</span>
+								<svg class="w-6 h-6 pointer-events-none" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+							</button>
+							<ul id="mods" class="hidden py-2 space-y-2">
+								<li>
+									<a
+										href="./liste-modules.html"
+										class="flex items-center p-2 pl-11 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+										>Liste</a
+									>
+								</li>
+								<li>
+									<a
+										href="./module.html"
+										class="flex items-center p-2 pl-11 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+										>Nouveau</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<button
+								onclick="trigger(event)"
+								data-target="devs"
+								type="button"
+								class="flex items-center p-2 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+								aria-controls="dropdown-example"
+								data-collapse-toggle="dropdown-example"
+							>
+								<svg
+									class="flex-shrink-0 w-6 h-6 transition duration-75 text-gray-400 group-hover:text-white pointer-events-none"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+								<span class="flex-1 ml-3 text-left whitespace-nowrap pointer-events-none">Devoirs</span>
+								<svg class="w-6 h-6 pointer-events-none" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+							</button>
+							<ul id="devs" class="hidden py-2 space-y-2">
+								<li>
+									<a
+										href="#"
+										class="flex items-center p-2 pl-11 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+										>Liste</a
+									>
+								</li>
+								<li>
+									<a
+										href="./devoir.html"
+										class="flex items-center p-2 pl-11 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+										>Nouveau</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<div class="flex-1">
+				<nav class="bg-gray-800">
+					<div class="max-w-7xl mx-auto px-4">
+						<div class="flex items-center justify-between md:justify-end h-14">
+							<div class="flex items-center gap-2">
+								<button
+									onclick="trigger(event)"
+									data-target="sidebar"
+									type="button"
+									class="bg-gray-800 md:hidden cursor-pointer flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+									id="user-menu-button"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									<svg
+										class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer pointer-events-none"
+										fill="currentColor"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 1000.000000 1000.000000"
+									>
+										<g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)">
+											<path
+												d="M2345 9989 c-163 -20 -360 -76 -487 -140 -272 -136 -491 -335 -640 -584 -41 -68 -112 -212 -121 -244 -5 -21 -9 -21 -319 -21 -343 0 -402 -7 -504 -57 -78 -37 -173 -128 -212 -201 -150 -281 -16 -614 287 -714 61 -20 92 -22 399 -27 l333 -6 42 -100 c257 -604 876 -975 1524 -915 479 44 912 313 1160 720 43 72 118 229 128 273 l7 27 2797 0 c1960 0 2815 3 2857 11 167 30 318 161 374 325 46 132 36 266 -28 389 -61 116 -155 197 -288 247 l-59 23 -2832 3 c-2005 1 -2833 5 -2833 13 0 20 -62 153 -108 234 -259 451 -740 737 -1262 750 -74 2 -171 -1 -215 -6z m360 -740 c302 -74 531 -320 585 -626 18 -99 8 -268 -20 -358 -83 -266 -268 -451 -535 -535 -98 -31 -264 -38 -372 -16 -304 61 -536 282 -613 582 -28 108 -28 269 0 379 81 325 359 563 691 594 104 9 161 5 264 -20z"
+											></path>
+											<path
+												d="M5360 6503 c-246 -39 -417 -99 -605 -211 -259 -155 -507 -445 -611 -716 l-29 -76 -1825 0 c-1988 0 -1895 2 -2016 -57 -78 -37 -173 -128 -212 -201 -150 -281 -18 -611 287 -714 l66 -23 1850 -3 1850 -3 29 -75 c59 -154 179 -336 310 -472 288 -300 670 -462 1084 -462 239 0 433 42 646 139 320 145 617 454 751 783 l34 83 1318 5 c1252 5 1321 6 1368 24 295 109 428 432 287 700 -61 117 -155 198 -288 248 l-59 23 -1313 5 -1313 5 -34 83 c-68 166 -185 340 -321 477 -231 233 -511 376 -844 431 -78 12 -347 17 -410 7z m421 -753 c118 -39 211 -94 300 -177 334 -316 332 -836 -5 -1150 -92 -86 -175 -135 -296 -175 -87 -29 -106 -32 -230 -32 -111 -1 -149 3 -213 22 -269 78 -473 279 -553 547 -35 119 -37 287 -5 410 80 305 334 536 646 586 99 16 253 2 356 -31z"
+											></path>
+											<path
+												d="M2280 2996 c-510 -91 -907 -388 -1129 -844 -21 -42 -44 -94 -50 -114 l-13 -38 -311 0 c-342 0 -401 -7 -503 -57 -78 -37 -173 -128 -212 -201 -150 -281 -16 -614 287 -714 62 -20 89 -22 403 -26 l337 -4 12 -36 c21 -66 95 -209 152 -294 214 -321 511 -533 892 -636 97 -26 108 -27 365 -27 298 0 351 8 555 86 371 142 696 461 847 831 l32 78 2796 0 c1960 0 2814 3 2856 11 167 30 318 161 374 325 46 132 36 266 -28 389 -61 116 -155 197 -288 247 l-59 23 -2827 3 -2827 2 -11 38 c-17 53 -110 229 -163 309 -136 204 -328 375 -558 497 -90 48 -276 114 -399 141 -101 23 -425 29 -530 11z m467 -744 c137 -44 215 -92 319 -196 102 -102 157 -190 201 -321 25 -73 27 -93 27 -235 0 -142 -2 -162 -27 -235 -45 -132 -99 -219 -201 -321 -170 -169 -370 -246 -601 -231 -116 8 -189 28 -300 82 -191 94 -350 282 -409 485 -36 123 -36 317 0 439 40 137 140 291 252 384 104 88 252 157 381 177 104 17 256 5 358 -28z"
+											></path>
+										</g>
+									</svg>
+								</button>
+								<a href="https://flowbite.com" class="flex items-center md:hidden">
+									<span class="self-center text-xl font-bold text-2xl whitespace-nowrap text-white">Flowbite</span>
+								</a>
+            </div>
+            <div class="flex">
+                <div class="relative">
+                    <div>
+                        <button onclick="trigger(event)" data-target="menu" type="button" class="trigger bg-gray-800 cursor-pointer flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+											<svg
+												class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer pointer-events-none"
+												fill="currentColor"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 1278.000000 1280.000000"
+											>
+												<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" stroke="none">
+													<path
+														d="M5911 12790 c-409 -52 -565 -233 -603 -696 -11 -142 -7 -279 22 -754 14 -210 0 -279 -67 -342 -45 -43 -108 -65 -278 -99 -208 -41 -259 -58 -530 -184 -303 -140 -521 -232 -602 -253 l-65 -17 -35 40 c-20 22 -117 135 -217 250 -368 427 -594 616 -802 670 -235 61 -449 -40 -738 -348 -441 -472 -472 -510 -536 -642 -43 -91 -60 -159 -60 -246 0 -83 15 -139 66 -244 73 -153 152 -245 502 -592 l326 -321 -34 -54 c-272 -428 -426 -760 -565 -1218 -57 -187 -84 -244 -128 -267 -53 -28 -155 -32 -493 -21 -551 18 -724 -12 -875 -150 -95 -87 -152 -208 -180 -382 -19 -113 -19 -819 -1 -930 58 -346 181 -505 453 -583 154 -45 247 -51 741 -48 l457 2 11 -43 c101 -380 368 -970 535 -1184 139 -178 154 -215 119 -290 -10 -20 -125 -138 -273 -278 -313 -297 -513 -502 -574 -588 -128 -179 -161 -352 -98 -517 61 -160 345 -497 647 -765 285 -254 458 -338 634 -308 206 35 394 175 708 527 121 135 550 587 563 593 4 2 72 -29 151 -69 330 -165 652 -285 1023 -378 146 -37 203 -56 227 -78 21 -19 23 -61 7 -213 -15 -149 -35 -1015 -27 -1134 23 -305 139 -489 359 -566 202 -71 582 -87 1079 -45 274 23 360 53 476 169 109 108 166 236 197 441 33 214 32 360 -8 920 -8 116 -18 258 -21 317 l-7 107 30 30 c22 22 57 38 134 61 266 80 466 147 604 202 158 64 422 189 540 256 l70 40 90 -102 c204 -232 566 -627 650 -710 161 -158 324 -272 455 -317 89 -30 224 -37 310 -15 81 21 199 84 269 144 129 110 425 388 536 503 238 248 332 441 305 628 -15 98 -76 229 -159 338 -66 88 -251 274 -416 419 -55 48 -143 126 -196 173 -52 47 -128 115 -168 150 -155 136 -153 153 37 474 149 250 275 521 370 799 28 81 60 165 71 186 33 66 103 114 206 143 68 19 349 17 575 -4 354 -33 489 -31 644 9 143 37 261 126 320 243 69 135 99 384 99 811 1 389 -23 554 -103 727 -75 162 -213 247 -470 289 -114 19 -439 21 -653 4 -78 -7 -205 -12 -282 -13 -157 -1 -193 8 -253 66 -49 47 -67 88 -102 238 -56 236 -85 315 -181 490 -129 236 -244 474 -264 547 -25 95 -23 183 6 230 13 22 124 129 246 240 401 365 554 558 608 767 19 76 19 204 0 280 -20 78 -84 205 -140 280 -44 59 -278 315 -465 508 -224 232 -389 327 -569 327 -248 0 -461 -151 -875 -620 -309 -351 -342 -377 -465 -368 -65 5 -140 39 -274 125 -122 79 -243 129 -472 197 -379 112 -499 161 -585 242 -76 71 -75 66 -54 377 49 730 2 1020 -201 1222 -132 132 -252 171 -570 185 -336 16 -664 20 -744 10z m712 -4576 c422 -62 783 -229 1053 -487 260 -248 409 -532 475 -904 27 -152 30 -456 5 -608 -59 -374 -204 -662 -458 -912 -143 -141 -259 -223 -457 -322 -589 -296 -1396 -273 -1965 55 -192 110 -390 284 -509 444 -212 288 -317 628 -317 1028 1 376 89 683 276 959 84 124 157 207 264 301 311 272 720 432 1195 466 88 6 337 -5 438 -20z"
+													/>
+												</g>
+											</svg>
+										</button>
+                    </div>
+                    <div id="menu" class="origin-top-right mt-4 absolute right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 focus:outline-none hidden" role="menu">
+                        <!-- Active: "bg-gray-100", Not Active: "" -->
+                        <a href="./profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md">Profile</a
+										>
+										<a href="./settings.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md"
+											>Settings</a
+										>
+										<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md">Sign out</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </nav>
+    <main class="p-4">
+        <h1 class="text-white text-2xl pb-4">Blank</h1>
+        <div class="w-full rounded-md bg-gray-800 p-4"></div>
+    </main>
+    </div>
+    </div>
+    <script defer>
+        function trigger(e) {
+            const target = e.target.dataset.target;
+            const el = document.querySelector(`#${target}`);
+            el.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

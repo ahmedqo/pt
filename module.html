@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Modules</title>
+</head>
+
+<body class="bg-gray-700">
+    <div class="flex">
+        <div class="flex-1">
+            <main class="p-4">
+                <h1 class="text-white text-2xl pb-4">Nouveau Module</h1>
+                <div class="w-full rounded-md bg-gray-800 p-4">
+                    <form action="#">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="flex-1 flex flex-col gap-2">
+                                    <label class="block text-white" for="last-tname">Code</label>
+                                    <input id="last-name" type="text" placeholder="Code" class="w-full bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
+                                </div>
+                                <div class="flex-1 flex flex-col gap-2">
+                                    <label class="block text-white" for="first-name">Titre</label>
+                                    <input id="first-name" type="text" placeholder="Titre" class="w-full bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="flex-1 flex flex-col gap-2">
+                                    <label class="block text-white" for="address">Description</label>
+                                    <textarea id="address" placeholder="Description" class="w-full bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"></textarea>
+                                </div>
+                            </div>
+                            <div class="flex justify-end">
+                                <button class="px-6 py-2 text-white w-full md:w-64 bg-blue-600 rounded-md hover:bg-blue-900">Creer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
