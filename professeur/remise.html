@@ -32,11 +32,77 @@
                         <td class="px-4 py-3 text-sm text-center">
                             <a href="#" class="hover:text-white hover:underline underline-offset-2">file 1</a>
                         </td>
+                        <td class="px-4 py-3">
+                            <div class="flex gap-2 items-center justify-center text-sm">
+                                <button onclick="set(event, 10, 5)" data-target="hidden" class="flex items-center justify-between text-sm font-medium leading-5 rounded-lg text-gray-400 focus:outline-none focus:shadow-outline-gray" aria-label="Edit">
+										<svg
+											class="w-5 h-5 cursor-pointer pointer-events-none"
+											aria-hidden="true"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+										>
+											<path
+												d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+											></path>
+										</svg>
+									</button>
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <div id="hidden" class="w-full h-screen p-4 flex items-center justify-center bg-gray-500 bg-opacity-50 fixed inset-0 hidden backdrop-blur">
+        <button onclick="trigger(event)" data-target="hidden" type="button" class="cursor-pointer flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white fixed top-4 right-4">
+				<svg
+					class="w-4 h-4 text-white cursor-pointer pointer-events-none"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 460.775 460.775"
+				>
+					<path
+						d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55  c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55  c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505  c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55  l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719  c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
+					/>
+				</svg>
+			</button>
+        <div class="w-full md:w-1/2 rounded-md bg-gray-800 p-4">
+            <form action="#">
+                <div class="flex flex-col gap-4">
+                    <input type="hidden" id="etudient" />
+                    <input type="hidden" id="devoir" />
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 flex flex-col gap-2">
+                            <label class="block text-white" for="note">Note</label>
+                            <input id="note" type="number" min="0" max="20" placeholder="Note" class="w-full bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 flex flex-col gap-2">
+                            <label class="block text-white" for="comment">Comentaire</label>
+                            <textarea id="comment" placeholder="Comentaire" class="w-full bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="px-6 py-2 text-white w-full md:w-64 bg-blue-600 rounded-md hover:bg-blue-900">Ajouter</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script defer>
+        function trigger(e) {
+            const target = e.target.dataset.target;
+            const el = document.querySelector(`#${target}`);
+            el.classList.toggle("hidden");
+        }
+
+        function set(e, t, d) {
+            document.querySelector("#etudient").value = t;
+            document.querySelector("#devoir").value = d;
+            trigger(e);
+        }
+    </script>
 </body>
 
 </html>
