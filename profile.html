@@ -14,6 +14,15 @@
     <div class="w-full rounded-md bg-gray-800 p-4">
         <form action="#">
             <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-2 items-center">
+                    <img class="rounded-md mx-auto w-44 h-44 object-cover" id="_preview" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStt8Ue2ZBqbY1HGhCxwV_G6bh5-E3-ggkXAQ&usqp=CAU" />
+                    <label for="file" class="flex flex-col justify-center items-center w-max">
+							<p class="w-max text-white px-4 py-2 text-center rounded-md bg-gray-700 hover:bg-gray-900 cursor-pointer">
+								Ajouter Image
+							</p>
+							<input id="file" type="file" onChange="preview(event)" class="hidden" />
+						</label>
+                </div>
                 <div class="flex flex-col md:flex-row gap-4">
                     <div class="flex-1 flex flex-col gap-2">
                         <label class="block text-white" for="last-tname">Nom</label>
@@ -46,6 +55,16 @@
             </div>
         </form>
     </div>
+    <script>
+        function preview(event) {
+            if (event.target.files.length > 0) {
+                var src = URL.createObjectURL(event.target.files[0]);
+                var preview = document.getElementById("_preview");
+                preview.src = src;
+                preview.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>
