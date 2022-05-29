@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,15 +41,23 @@
         </div>
     </div>
     <div class="mx-auto flex justify-center items-center w-max mt-4">
-        <form action="#">
+        <form id="form" action="/">
             <label for="file" class="flex flex-col justify-center items-center w-full rounded-md cursor-pointer bg-gray-800">
 					<p class="w-full text-white px-4 py-2 text-center rounded-md hover:bg-gray-900 cursor-pointer">
 						Ajouter un travail
 					</p>
-					<input id="file" type="file" class="hidden" />
+					<input id="file" onchange="change(event)" type="file" class="hidden" />
 				</label>
         </form>
     </div>
+	<script>
+		function change(e) {
+			if(e.target.files.length) {
+				document.querySelector("#form").submit();
+				console.log(100)
+			}
+		}
+	</script>
 </body>
 
 </html>
