@@ -215,28 +215,41 @@
 								</li>
 							</ul>
 						</li>
-					</ul>
-					<!-- sidebar menu end -->
-				</div>
-			</aside>
-			<!-- sidebar end -->
-			<div class="flex-1">
-				<!-- header start -->
-
-				<nav class="bg-gray-800">
-					<div class="max-w-7xl mx-auto px-4">
-						<div class="flex items-center justify-between md:justify-end h-14">
-							<div class="flex items-center gap-2">
-								<!-- header button icon start -->
-								<button
-									onclick="trigger(event)"
-									data-target="sidebar"
-									type="button"
-									class="bg-gray-800 md:hidden cursor-pointer flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-									id="user-menu-button"
-									aria-expanded="false"
-									aria-haspopup="true"
+						<li>
+							<a
+								class="flex items-center p-2 w-full text-base font-normal rounded-lg transition duration-75 text-white hover:bg-gray-700"
+								href="./notifications.html"
+							>
+								<svg
+									class="flex-shrink-0 w-6 h-6 transition duration-75 text-gray-400 group-hover:text-white pointer-events-none"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
 								>
+									<path
+										fill-rule="evenodd"
+										d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+								<span class="flex-1 ml-3 text-left whitespace-nowrap pointer-events-none">Notifications</span>
+							</a>
+                            </li>
+                        </ul>
+                        <!-- sidebar menu end -->
+            </div>
+        </aside>
+        <!-- sidebar end -->
+        <div class="flex-1">
+            <!-- header start -->
+
+            <nav class="bg-gray-800">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="flex items-center justify-between md:justify-end h-14">
+                        <div class="flex items-center gap-2">
+                            <!-- header button icon start -->
+                            <button onclick="trigger(event)" data-target="sidebar" type="button" class="bg-gray-800 md:hidden cursor-pointer flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button"
+                                aria-expanded="false" aria-haspopup="true">
 									<svg
 										class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer pointer-events-none"
 										fill="currentColor"
@@ -256,45 +269,45 @@
 										</g>
 									</svg>
 								</button>
-								<!-- header button icon end -->
-								<!-- header logo start -->
-								<a href="https://flowbite.com" class="flex items-center md:hidden">
-									<span class="self-center text-xl font-bold text-2xl whitespace-nowrap text-white">Flowbite</span>
-								</a>
-                                <!-- header logo end -->
-            </div>
-            <div class="flex">
-                <div class="relative">
-                    <div>
-                        <!-- header button icon start -->
-                        <button onclick="trigger(event)" data-target="menu" type="button" class="trigger bg-gray-800 cursor-pointer flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <!-- header button icon end -->
+                            <!-- header logo start -->
+                            <a href="https://flowbite.com" class="flex items-center md:hidden">
+                                <span class="self-center text-xl font-bold text-2xl whitespace-nowrap text-white">Flowbite</span>
+                            </a>
+                            <!-- header logo end -->
+                        </div>
+                        <div class="flex">
+                            <div class="relative">
+                                <div>
+                                    <!-- header button icon start -->
+                                    <button onclick="trigger(event)" data-target="menu" type="button" class="trigger bg-gray-800 cursor-pointer flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
 											<img
 												class="w-8 h-8 rounded-full pointer-events-none object-cover"
 												src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStt8Ue2ZBqbY1HGhCxwV_G6bh5-E3-ggkXAQ&usqp=CAU"
 											/>
 										</button>
-                        <!-- header button icon end -->
-                    </div>
-                    <!-- header menu start -->
-                    <div id="menu" class="origin-top-right mt-4 absolute right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 focus:outline-none hidden" role="menu">
-                        <a href="./profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md">Profile</a
+                                    <!-- header button icon end -->
+                                </div>
+                                <!-- header menu start -->
+                                <div id="menu" class="origin-top-right mt-4 absolute right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 focus:outline-none hidden" role="menu">
+                                    <a href="./profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md">Profile</a
 										>
 										<a href="./settings.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md"
 											>Settings</a
 										>
 										<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md">Sign out</a>
+                                </div>
+                                <!-- header menu end -->
+                            </div>
+                        </div>
                     </div>
-                    <!-- header menu end -->
                 </div>
-            </div>
-    </div>
-    </div>
-    </nav>
-    <!-- header end -->
-    <!-- container start -->
-    <main class="max-w-7xl mx-auto p-4"></main>
-    <!-- container end -->
-    </div>
+            </nav>
+            <!-- header end -->
+            <!-- container start -->
+            <main class="max-w-7xl mx-auto p-4"></main>
+            <!-- container end -->
+        </div>
     </div>
     <script defer>
         function trigger(e) {
